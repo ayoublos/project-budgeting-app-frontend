@@ -1,0 +1,21 @@
+.navbar-container{
+    background-color: turquoise;
+    height: 20vw;
+    width: 100vw;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: space-between;
+    h1{
+        font-size: 3.5vw;
+        margin: 2vw;
+        margin-top: 5vw;
+        
+    }
+    button{
+        height: 5vw;
+        margin: 2vw;
+        margin-top: 5vw;
+
+    }
+    
+}
