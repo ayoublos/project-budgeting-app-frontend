@@ -9,7 +9,7 @@ function Transactions() {
   const [color, setColor] = useState(``);
   function changeColor(total){
     if(total>100){
-      setColor(`green`)
+      setColor(`greenyellow`)
     }else if(total<0){
       setColor(`red`)
     }
@@ -29,7 +29,7 @@ function Transactions() {
 
 
   return <div className="transactions-container">
-          <h3 style={{backgroundColor:color}}>Bank Account Total is :{total}</h3>
+          <h2 style={{backgroundColor:color}}>Bank Account Total is :${total}</h2>
 
 {...transactions.map(transaction=>{
     return <div>

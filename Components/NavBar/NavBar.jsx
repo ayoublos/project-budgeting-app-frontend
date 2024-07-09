@@ -1,14 +1,18 @@
 
 import { useNavigate } from 'react-router-dom';
 import './NavBar.scss'
+import { Link } from 'react-router-dom';
+
 
 
 function NavBar(){
     const navigate=useNavigate()
     return(
         <div className="navbar-container">
-            <h1>Budgeting Application </h1>
-            <button onClick={()=>{navigate(`/transactions/new`)}}>New Transaction</button>
+            <Link to={`/`}><h1>Budgeting Application </h1></Link>
+            
+            <button className='transactions' onClick={()=>{navigate(`/transactions`)}}>Transactions</button>
+            <button className='newtransactions' onClick={()=>{navigate(`/transactions/new`)}}> New Transaction</button>
             
              </div>
     )

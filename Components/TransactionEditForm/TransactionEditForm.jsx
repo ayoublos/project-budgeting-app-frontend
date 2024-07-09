@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { nanoid } from "nanoid";
+import './TransactionEditForm.scss'
 
 function TransactionEditForm() {
   const API = import.meta.env.VITE_API_URL;
@@ -61,47 +62,58 @@ function TransactionEditForm() {
   }
 
   return (
-    <div className="transactionnewform-container">
-      <form action="" onSubmit={handleSubmit}>
-        <label htmlFor="">
-          Item Name
-          <input
-            type="text"
-            id="item_name"
-            value={transaction.item_name}
-            onChange={handleChange}
-          />
-        </label>
-        <label>
-          Amount
-          <input
-            type="text"
-            id="amount"
-            value={transaction.amount}
-            onChange={handleChange}
-          />
-        </label>
-        <label htmlFor="">
-          From
-          <input
-            type="text"
-            id="from"
-            value={transaction.from}
-            onChange={handleChange}
-          />
-        </label>
-        <label htmlFor="">
-          Category
-          <input
-            type="text"
-            id="category"
-            value={transaction.category}
-            onChange={handleChange}
-          />
-        </label>
-        <button>Submit</button>
-      </form>
-    </div>
+    <div className="transactioneditform-container">
+    <h2>Update Transaction</h2>
+  <form action="" onSubmit={handleSubmit}>
+    <label htmlFor="">
+        <h3>          Item Name
+</h3>
+      <br />
+      <input placeholder="Name"
+        type="text"
+        id="item_name"
+        value={transaction.item_name}
+        onChange={handleChange}
+      />
+    </label>
+    <br />
+    <label>
+      
+        <h3>Amount</h3>
+      <br />
+      <input placeholder="Amount"
+        type="number"
+        id="amount"
+        value={transaction.amount}
+        onChange={handleChange}
+      />
+    </label>
+    <br />
+    <label htmlFor="">
+      <h3>From</h3>
+      <br />
+      <input placeholder="From"
+        type="text"
+        id="from"
+        value={transaction.from}
+        onChange={handleChange}
+      />
+    </label>
+    <br />
+    <label htmlFor="">
+      <h3>Category</h3>
+      <br />
+      <input placeholder="Category"
+        type="text"
+        id="category"
+        value={transaction.category}
+        onChange={handleChange}
+      />
+    </label>
+    <br />
+    <button>Update Transaction</button>
+  </form>
+</div>
   );
 }
 

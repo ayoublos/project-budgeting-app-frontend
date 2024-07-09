@@ -17,9 +17,23 @@ function TransactionDetails(){
     }
 
     return (<div className="transactiondetails-container">
+        <h3>Name of Transaction</h3>
+        <p>{transactionDetails.item_name}</p>
+        <h3>Amount</h3>
+
+        <p>$ {transactionDetails.amount}</p>
+        <h3>Date</h3>
+
+        <p>{transactionDetails.date}</p>
+        <h3>From</h3>
+
         <p>{transactionDetails.from}</p>
-        <button onClick={()=>navigate(`/transactions/${id}/edit`)}>Edit</button>
-        <button onClick={deleteTransaction}>Delete</button>
+        <h3>Category</h3>
+
+        <p>{transactionDetails.category}</p>
+
+        <button className="edit" onClick={()=>navigate(`/transactions/${id}/edit`)}>Edit</button>
+        <button className="delete" onClick={deleteTransaction}>Delete</button>
 
 
 

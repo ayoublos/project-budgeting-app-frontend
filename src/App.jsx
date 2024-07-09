@@ -8,13 +8,14 @@ import HomePage from '../Pages/HomePage'
 import TransactionNewForm from '../Components/TransactionNewForm/TransactionNewForm';
 import TransactionEditForm from '../Components/TransactionEditForm/TransactionEditForm';
 import TransactionDetails from '../Components/TransactionDetails/TransactionDetails';
+import Transactions from '../Components/Transactions/Transactions';
 
 
 function App() {
      
 
 
-  
+
   return (
     <div className='app-container'>
       <Router>
@@ -22,7 +23,7 @@ function App() {
         <main>
           <Routes>
             <Route path='/' element={<HomePage/>} />
-            <Route path='/transactions' element={<HomePage/>} />
+            <Route path='/transactions' element={<Transactions/>} />
             <Route path='/transactions/new' element={<TransactionNewForm/>} />
             <Route path='/transactions/:id' element={<TransactionDetails/>} />
             <Route path='/transactions/:id/edit' element={<TransactionEditForm/>} />

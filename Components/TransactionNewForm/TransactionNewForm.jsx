@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { nanoid } from "nanoid";
 import { useNavigate } from "react-router-dom";
+import './TransactionNewForm.scss'
 
 function TransactionNewForm() {
   const API = import.meta.env.VITE_API_URL;
@@ -34,44 +35,55 @@ function TransactionNewForm() {
 
   return (
     <div className="transactionnewform-container">
+        <h2>Add a New Transaction</h2>
       <form action="" onSubmit={handleSubmit}>
         <label htmlFor="">
-          Item Name
-          <input
+            <h3>          Item Name
+</h3>
+          <br />
+          <input placeholder="Name"
             type="text"
             id="item_name"
             value={transaction.item_name}
             onChange={handleChange}
           />
         </label>
+        <br />
         <label>
-          Amount
-          <input
+          
+            <h3>Amount</h3>
+          <br />
+          <input placeholder="Amount"
             type="number"
             id="amount"
             value={transaction.amount}
             onChange={handleChange}
           />
         </label>
+        <br />
         <label htmlFor="">
-          From
-          <input
+          <h3>From</h3>
+          <br />
+          <input placeholder="From"
             type="text"
             id="from"
             value={transaction.from}
             onChange={handleChange}
           />
         </label>
+        <br />
         <label htmlFor="">
-          Category
-          <input
+          <h3>Category</h3>
+          <br />
+          <input placeholder="Category"
             type="text"
             id="category"
             value={transaction.category}
             onChange={handleChange}
           />
         </label>
-        <button>Submit</button>
+        <br />
+        <button>Create a New Transaction</button>
       </form>
     </div>
   );

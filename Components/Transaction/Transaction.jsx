@@ -7,7 +7,7 @@ function Transaction ({transaction}){
             <Link to={`/transactions/${transaction.id}`}>
             <p>{transaction.item_name}</p></Link>
             
-            <p>{transaction.amount}</p>
+            <p>$ {transaction.amount}</p>
         </div>
     )
 }
