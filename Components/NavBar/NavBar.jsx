@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 
-function NavBar(){
+function NavBar({total,color}){
     const navigate=useNavigate()
     return(
         <div className="navbar-container">
@@ -13,7 +13,7 @@ function NavBar(){
             
             <button className='transactions' onClick={()=>{navigate(`/transactions`)}}>Transactions</button>
             <button className='newtransactions' onClick={()=>{navigate(`/transactions/new`)}}> New Transaction</button>
-            
+
              </div>
     )
 }

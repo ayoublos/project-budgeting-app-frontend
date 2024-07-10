@@ -3,6 +3,7 @@ import './TransactionDetails.scss'
 import { useEffect, useState } from "react";
 function TransactionDetails(){
     const [transactionDetails,setTransactionDetails]=useState([])
+    const [deleteConfirmation,setDeleteConfirmation]=useState(false)
     const API=import.meta.env.VITE_API_URL
     let navigate=useNavigate()
     let {id}=useParams()
@@ -33,7 +34,15 @@ function TransactionDetails(){
         <p>{transactionDetails.category}</p>
 
         <button className="edit" onClick={()=>navigate(`/transactions/${id}/edit`)}>Edit</button>
-        <button className="delete" onClick={deleteTransaction}>Delete</button>
+        <button className="delete" onClick={()=>setDeleteConfirmation(true)}>Delete</button>
+        {deleteConfirmation?<div className="deleteConfirmation"> 
+        <h3>Are you sure that you want to delete this transaction?</h3>
+
+        <button onClick={()=>setDeleteConfirmation(false)} className="no">no</button>
+        <button onClick={deleteTransaction} className="yes">yes</button>
+         </div>:null
+        }
+       
 
 
 

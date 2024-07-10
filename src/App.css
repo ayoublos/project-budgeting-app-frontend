@@ -1,4 +1,32 @@
 .app-container{
   display: grid;
   grid-template-rows: 1fr 4fr;
+  table {
+    margin-top: -5vw;
+    width: 90vw;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+      /* width: 10vw; */
+    }
+    td{
+      width: 10vw;
+      text-align: center;
+    }
+    
+    th {
+      text-align: center;
+      background-color: #f2f2f2;
+    }
+    
+    tr:nth-child(even) {
+      text-align: center;
+      background-color: #f2f2f2;
+    }
+  }
+  
+ 
 }

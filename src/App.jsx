@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState ,useEffect} from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -9,24 +9,25 @@ import TransactionNewForm from '../Components/TransactionNewForm/TransactionNewF
 import TransactionEditForm from '../Components/TransactionEditForm/TransactionEditForm';
 import TransactionDetails from '../Components/TransactionDetails/TransactionDetails';
 import Transactions from '../Components/Transactions/Transactions';
+import Error from '../Components/Error/Error';
 
 
 function App() {
-     
 
 
 
   return (
     <div className='app-container'>
       <Router>
-        <NavBar/>
+        <NavBar />
         <main>
           <Routes>
             <Route path='/' element={<HomePage/>} />
-            <Route path='/transactions' element={<Transactions/>} />
+            <Route path='/transactions' element={<Transactions />} />
             <Route path='/transactions/new' element={<TransactionNewForm/>} />
             <Route path='/transactions/:id' element={<TransactionDetails/>} />
             <Route path='/transactions/:id/edit' element={<TransactionEditForm/>} />
+            <Route path='/*' element={<Error/>} />
         
           </Routes>
         </main>

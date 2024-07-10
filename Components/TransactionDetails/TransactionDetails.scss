@@ -20,4 +20,24 @@
         color: white;
         margin: 1vw;
     }
+    .deleteConfirmation{
+        background: rgba( 255, 255, 255, 0.35 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 14px );
+        -webkit-backdrop-filter: blur( 14px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        height: 15vw;
+        border-radius: 1vw;
+        transform: translate(0vw,-10vw);
+    }
+    .yes{
+        background-color: green;
+        transform: translate(1vw,1vw);
+    }
+    .no{
+        background-color: red;
+        transform: translate(0vw,1vw);
+
+    }
 }

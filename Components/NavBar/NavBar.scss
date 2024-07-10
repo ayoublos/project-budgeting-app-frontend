@@ -1,6 +1,6 @@
 .navbar-container{
     background-color: turquoise;
-    height: 20vw;
+    height: 15vw;
     width: 100vw;
     grid-row: 1/2;
     display: flex;
@@ -11,12 +11,17 @@
         margin-top: 5vw;
         
     }
+    h2{
+        transform: translate(-2vw,5vw);
+    }
+   
     button{
         height: 3vw;
         margin: 2vw;
         margin-top: 5vw;
 
     }
+
     // .transactions{
     //     height: 3vw;
     // }

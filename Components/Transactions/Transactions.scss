@@ -1,5 +1,7 @@
 .transactions-container{
+   
     font-size: 1.5vw;
+   
     hr{
         width: 80vw;
 
@@ -8,6 +10,12 @@
         color: black;
         text-align: center;
 
+    }
+    table{
+        width: 90vw;
+        transform: translate(5vw,10vw);
+
+        
     }
 
 }
